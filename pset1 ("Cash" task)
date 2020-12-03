@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <cs50.h>
+#include <math.h>
+
+int main(void)
+{
+    float cash;
+    int counter = 0;
+    do {
+        cash = get_float("cash: ");
+    }while(cash < 0.009);
+    cash = round(cash*100);
+    int cashint = cash;
+    int yirmibeskurusadet = cashint/25;
+    counter += yirmibeskurusadet;
+    int yirmibeskuruskalan = cashint%25;
+    int onkurusadet = yirmibeskuruskalan/10;
+    counter += onkurusadet;
+    int onkuruskalan = yirmibeskuruskalan%10;
+    int beskurusadet = onkuruskalan/5;
+    counter += beskurusadet;
+    int beskuruskalan = onkuruskalan%5;
+    int birkurusadet = beskuruskalan;
+    counter += birkurusadet;
+    printf("%i\n",counter);
+
+
+}
