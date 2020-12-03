@@ -1,0 +1,29 @@
+#include <cs50.h>
+#include <stdio.h>
+
+int  main (void) 
+{ 
+    int  yükseklik ; 
+    do 
+    { 
+    yükseklik  =  get_int ("Yükseklik: "); 
+    } 
+    while ( yükseklik  <  1  ||  yükseklik  >  8 ); 
+    for ( int  i  =  0 ;  i  <  yükseklik ;  i ++ ) 
+    { 
+        for ( int  k  =  0 ;  k  <  yükseklik - i  -1 ;  k ++ ) 
+         { 
+             printf (" "); 
+         } 
+        for ( int  j  =  - 1  ;  j < i ;  j ++ ) 
+        { 
+            printf ("#"); 
+        } 
+        printf ("  "); 
+        for ( int  j  =  - 1  ;  j < i ;  j ++ ) 
+        { 
+            printf ( "#" ); 
+        }
+        printf ( "\n" ); 
+     } 
+}
