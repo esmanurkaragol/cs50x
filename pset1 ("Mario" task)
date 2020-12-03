@@ -1,0 +1,27 @@
+#include <stdio.h> 
+#include <cs50.h> 
+
+int main(void)
+{
+    int uzunluk;
+    do
+    {
+        uzunluk = get_int("Uzunluk giriniz: ");
+
+    }
+    while(uzunluk < 1 || uzunluk > 8);
+
+    for(int i = 1; i <= uzunluk; i++)
+    {
+        for(int k = 1; k <= uzunluk-i; k++)
+        {
+            printf(" ");
+        }
+        for(int j = 1; j<= i; j++)
+        {
+            printf("#");
+        }
+    printf("\n");
+    }
+    
+}
